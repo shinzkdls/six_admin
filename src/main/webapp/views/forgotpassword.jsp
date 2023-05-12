@@ -28,9 +28,9 @@
                                 </div>
                                 <form>
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="inputEmail" type="email"
-                                               placeholder="name@example.com"/>
-                                        <label for="inputEmail">Email address</label>
+                                        <input class="form-control" id="inputID" type="text"
+                                               placeholder="Admin ID"/>
+                                        <label for="inputID">Admin ID</label>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                         <a class="small" href="login.html">Return to login</a>

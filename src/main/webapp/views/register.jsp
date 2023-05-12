@@ -24,26 +24,10 @@
                             </div>
                             <div class="card-body">
                                 <form>
-                                    <div class="row mb-3">
-                                        <div class="col-md-6">
-                                            <div class="form-floating mb-3 mb-md-0">
-                                                <input class="form-control" id="inputFirstName" type="text"
-                                                       placeholder="Enter your first name"/>
-                                                <label for="inputFirstName">First name</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <input class="form-control" id="inputLastName" type="text"
-                                                       placeholder="Enter your last name"/>
-                                                <label for="inputLastName">Last name</label>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="inputEmail" type="email"
-                                               placeholder="name@example.com"/>
-                                        <label for="inputEmail">Email address</label>
+                                        <input class="form-control" id="inputID" type="text"
+                                               placeholder="Admin ID"/>
+                                        <label for="inputID">Admin ID</label>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-md-6">
