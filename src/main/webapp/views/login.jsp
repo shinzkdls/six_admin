@@ -22,16 +22,16 @@
                         <div class="card shadow-lg border-0 rounded-lg mt-5">
                             <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
                             <div class="card-body">
-                                <form>
+                                <form method="post" action="/loginimpl">
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="inputId" type="text"
+                                        <input class="form-control" id="id" name="id" type="text"
                                                placeholder="Admin ID"/>
-                                        <label for="inputId">Admin ID</label>
+                                        <label for="id">Admin ID</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="inputPassword" type="password"
+                                        <input class="form-control" id="pwd" name="pwd" type="password"
                                                placeholder="Password"/>
-                                        <label for="inputPassword">Password</label>
+                                        <label for="pwd">Password</label>
                                     </div>
                                     <div class="form-check mb-3">
                                         <input class="form-check-input" id="inputRememberPassword" type="checkbox"
@@ -40,8 +40,8 @@
                                             Password</label>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                        <a class="small" href="password.html">Forgot Password?</a>
-                                        <a class="btn btn-primary" href="index.html">Login</a>
+                                        <button class="small" href="/forgotpassword">Forgot Password?</button>
+                                        <button class="btn btn-primary" href="/loginimpl">Login</button>
                                     </div>
                                 </form>
                             </div>

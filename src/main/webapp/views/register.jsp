@@ -23,31 +23,23 @@
                             <div class="card-header"><h3 class="text-center font-weight-light my-4">Create Account</h3>
                             </div>
                             <div class="card-body">
-                                <form>
+                                <form method="post" action="/registerimpl">
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="inputID" type="text"
+                                        <input class="form-control" id="id" name="id" type="text"
                                                placeholder="Admin ID"/>
-                                        <label for="inputID">Admin ID</label>
+                                        <label for="id">Admin ID</label>
                                     </div>
-                                    <div class="row mb-3">
-                                        <div class="col-md-6">
-                                            <div class="form-floating mb-3 mb-md-0">
-                                                <input class="form-control" id="inputPassword" type="password"
-                                                       placeholder="Create a password"/>
-                                                <label for="inputPassword">Password</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-floating mb-3 mb-md-0">
-                                                <input class="form-control" id="inputPasswordConfirm" type="password"
-                                                       placeholder="Confirm password"/>
-                                                <label for="inputPasswordConfirm">Confirm Password</label>
-                                            </div>
-                                        </div>
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" id="pwd" name="pwd" type="password"
+                                               placeholder="Create a password"/>
+                                        <label for="pwd">Password</label>
                                     </div>
                                     <div class="mt-4 mb-0">
-                                        <div class="d-grid"><a class="btn btn-primary btn-block" href="login.html">Create
-                                            Account</a></div>
+                                        <div class="d-grid">
+                                            <button class="btn btn-primary btn-block" type="submit">
+                                                Create Account
+                                            </button>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
