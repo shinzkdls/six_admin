@@ -1,7 +1,7 @@
 package com.kbstar.dto;
 
 import lombok.*;
-
+import org.springframework.web.multipart.MultipartFile;
 import java.util.Date;
 
 @AllArgsConstructor
@@ -19,4 +19,7 @@ public class Item {
     private String size_m;
     private String size_l;
     private Date rdate;
+
+    private MultipartFile img;
+
 }
