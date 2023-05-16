@@ -99,13 +99,8 @@
                     <div class="collapse" id="collapsePages2" aria-labelledby="headingOne"
                          data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages2">
-                            <div class="collapse" id="pagesCollapseAuth2" aria-labelledby="headingOne"
-                                 data-bs-parent="#sidenavAccordionPages">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/item/add">add</a>
-                                    <a class="nav-link" href="/item/all">all</a>
-                                </nav>
-                            </div>
+                            <a class="nav-link" href="/item/add">add</a>
+                            <a class="nav-link" href="/item/all">all</a>
                         </nav>
                     </div>
 
