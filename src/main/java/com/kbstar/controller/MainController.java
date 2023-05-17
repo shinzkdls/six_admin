@@ -2,8 +2,10 @@ package com.kbstar.controller;
 
 import com.kbstar.dto.Adm;
 import com.kbstar.dto.Contact;
+import com.kbstar.dto.Cust;
 import com.kbstar.service.AdmService;
 import com.kbstar.service.ContactService;
+import com.kbstar.service.CustService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,6 +13,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
@@ -26,12 +29,26 @@ public class MainController {
     AdmService admService;
     @Autowired
     ContactService contactService;
+    @Autowired
+    CustService custService;
 
     @Autowired
     private BCryptPasswordEncoder encoder;
 
     @RequestMapping("/")
-    public String main(Model model) {
+    public String main(Model model) throws Exception {
+        List<Cust> list = null;
+        list = custService.get();
+        model.addAttribute("custList", list);
+        model.addAttribute("adminserver", adminServer);
+        return "index";
+    }
+
+    @RequestMapping("/reset")
+    public String cust(Model model) throws Exception {
+        List<Cust> list = null;
+        list = custService.get();
+        model.addAttribute("center", "custList");
         model.addAttribute("adminserver", adminServer);
         return "index";
     }
@@ -111,4 +128,7 @@ public class MainController {
         model.addAttribute("center", "contact");
         return "index";
     }
+
+
+
 }
