@@ -2,8 +2,10 @@ package com.kbstar.controller;
 
 import com.kbstar.dto.Adm;
 import com.kbstar.dto.Contact;
+import com.kbstar.dto.Cust;
 import com.kbstar.service.AdmService;
 import com.kbstar.service.ContactService;
+import com.kbstar.service.CustService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -26,12 +28,17 @@ public class MainController {
     AdmService admService;
     @Autowired
     ContactService contactService;
+    @Autowired
+    CustService custService;
 
     @Autowired
     private BCryptPasswordEncoder encoder;
 
     @RequestMapping("/")
-    public String main(Model model) {
+    public String main(Model model) throws Exception {
+        List<Cust> list = null;
+        list = custService.get();
+        model.addAttribute("custList", list);
         model.addAttribute("adminserver", adminServer);
         return "index";
     }
@@ -56,13 +63,7 @@ public class MainController {
         model.addAttribute("center", "register");
         return "index";
     }
-
-    @RequestMapping("/forgotpassword")
-    public String forgotpassword(Model model) {
-        model.addAttribute("adminserver", adminServer);
-        model.addAttribute("center", "forgotpassword");
-        return "index";
-    }
+    
 
     @RequestMapping("/logoutimpl")
     public String logout(Model model, HttpSession session) {

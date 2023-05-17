@@ -25,7 +25,7 @@
 <body class="sb-nav-fixed">
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="/">Start Bootstrap</a>
+    <a class="navbar-brand ps-3" href="/">6 Shoppers Admin</a>
     <!-- Sidebar Toggle-->
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
             class="fas fa-bars"></i></button>
@@ -88,7 +88,6 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="/loginpage">Login</a>
                                     <a class="nav-link" href="/register">Register</a>
-                                    <a class="nav-link" href="/forgotpassword">Forgot Password</a>
                                 </nav>
                             </div>
                         </nav>
@@ -109,10 +108,6 @@
                         </nav>
                     </div>
 
-                    <a class="nav-link" href="/charts">
-                        <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                        Charts
-                    </a>
                     <a class="nav-link" href="/contact">
                         <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                         Contact
