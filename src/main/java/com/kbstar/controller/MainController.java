@@ -3,9 +3,11 @@ package com.kbstar.controller;
 import com.kbstar.dto.Adm;
 import com.kbstar.dto.Contact;
 import com.kbstar.dto.Cust;
+import com.kbstar.dto.SalesData;
 import com.kbstar.service.AdmService;
 import com.kbstar.service.ContactService;
 import com.kbstar.service.CustService;
+import com.kbstar.service.SalesService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -30,6 +32,8 @@ public class MainController {
     ContactService contactService;
     @Autowired
     CustService custService;
+    @Autowired
+    SalesService salesService;
 
     @Autowired
     private BCryptPasswordEncoder encoder;
@@ -38,6 +42,8 @@ public class MainController {
     public String main(Model model) throws Exception {
         List<Cust> list = null;
         list = custService.get();
+        SalesData salesData = salesService.getdatasalesTotal();
+        model.addAttribute("salesData", salesData);
         model.addAttribute("custList", list);
         model.addAttribute("adminserver", adminServer);
         return "index";
@@ -63,7 +69,7 @@ public class MainController {
         model.addAttribute("center", "register");
         return "index";
     }
-    
+
 
     @RequestMapping("/logoutimpl")
     public String logout(Model model, HttpSession session) {

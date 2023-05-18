@@ -27,6 +27,19 @@
         ORDER BY RDATE, GENDER
     </select>
 
+    <select id="getdatasalesTotal" resultType="salesdata">
+        SELECT SUM(PRICE) AS SUM,
+               ROUND(AVG(PRICE)) AS AVG,
+               MAX(PRICE) AS MAX,
+               MIN(PRICE) AS MIN
+        FROM (SELECT SUBSTR(TO_CHAR(RDATE, 'YYYYMMDD'), 1, 8) AS RDATE
+                , SUM (PRICE) AS PRICE
+            FROM SALES
+            GROUP BY SUBSTR(TO_CHAR(RDATE, 'YYYYMMDD'), 1, 8)
+            ORDER BY RDATE
+            )
+    </select>
+
     <insert id="insert" parameterType="sales">
         INSERT INTO sales
         VALUES (TO_DATE(#{rdate}, 'YYYY-MM-DD'), #{price}, #{gender})

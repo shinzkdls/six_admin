@@ -1,6 +1,7 @@
 package com.kbstar.service;
 
 import com.kbstar.dto.Sales;
+import com.kbstar.dto.SalesData;
 import com.kbstar.frame.KBService;
 import com.kbstar.mapper.SalesMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,5 +52,9 @@ public class SalesService implements KBService<String, Sales> {
 
     public List<Sales> getdatasalessum() throws Exception {
         return mapper.getdatasalessum();
+    }
+
+    public SalesData getdatasalesTotal() throws Exception {
+        return mapper.getdatasalesTotal();
     }
 }
