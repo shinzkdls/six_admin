@@ -103,8 +103,8 @@
                     <div class="collapse" id="collapsePages2" aria-labelledby="headingOne"
                          data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages2">
-                            <a class="nav-link" href="/item/add">add</a>
-                            <a class="nav-link" href="/item/all">all</a>
+                            <a class="nav-link" href="/item/add">ADD</a>
+                            <a class="nav-link" href="/item/all">ALL</a>
                         </nav>
                     </div>
 
@@ -115,8 +115,8 @@
                 </div>
             </div>
             <div class="sb-sidenav-footer">
-                <div class="small">Logged in as:</div>
-                Start Bootstrap
+                <div class="small">Logged in as: KBStar</div>
+
             </div>
         </nav>
     </div>

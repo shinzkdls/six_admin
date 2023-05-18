@@ -30,14 +30,14 @@
                     type: 'line'
                 },
                 title: {
-                    text: '일매출'
+                    text: 'Daily Sales'
                 },
                 xAxis: {
                     categories: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
                 },
                 yAxis: {
                     title: {
-                        text: '매출액(단위:원)'
+                        text: 'Daily Sales(won)'
                     }
                 },
                 plotOptions: {
@@ -49,7 +49,7 @@
                     }
                 },
                 series: [{
-                    name: '일매출액',
+                    name: 'Daily Sales',
                     data: result
                 }]
             });
@@ -71,7 +71,7 @@
         display: function (result) {
             Highcharts.chart('myBarChart2', {
                 title: {
-                    text: '남여 별 월매출 추이',
+                    text: 'Monthly Sales by Gender',
                     align: 'left'
                 },
                 xAxis: {
@@ -79,11 +79,11 @@
                 },
                 yAxis: {
                     title: {
-                        text: '매출액(단위:백만)'
+                        text: 'Sales(million)'
                     }
                 },
                 tooltip: {
-                    valueSuffix: ' 백만'
+                    valueSuffix: ' million'
                 },
                 plotOptions: {
                     series: {
@@ -92,15 +92,15 @@
                 },
                 series: [{
                     type: 'column',
-                    name: '남성',
+                    name: 'Male',
                     data: result.Male
                 }, {
                     type: 'column',
-                    name: '여성',
+                    name: 'Female',
                     data: result.Female
                 }, {
                     type: 'spline',
-                    name: '합계',
+                    name: 'Total',
                     data: result.Sum,
                     marker: {
                         lineWidth: 2,
@@ -125,7 +125,7 @@
                     <div class="card-body"><fmt:formatNumber type="number" value="${salesData.sum}"
                                                              pattern="###,###원"/></div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="#">누적 매출액</a>
+                        <a class="small text-white stretched-link" href="#">Cumulative Sales Revenue</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
@@ -135,7 +135,7 @@
                     <div class="card-body"><fmt:formatNumber type="number" value="${salesData.avg}"
                                                              pattern="###,###원"/></div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="#">일매출 평균액</a>
+                        <a class="small text-white stretched-link" href="#">Average Daily Revenue</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
@@ -145,7 +145,7 @@
                     <div class="card-body"><fmt:formatNumber type="number" value="${salesData.max}"
                                                              pattern="###,###원"/></div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="#">일매출 최고액</a>
+                        <a class="small text-white stretched-link" href="#">Maximum Daily Revenue</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
@@ -153,9 +153,9 @@
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-danger text-white mb-4">
                     <div class="card-body"><fmt:formatNumber type="number" value="${salesData.min}"
-                                                             pattern="###,###원"/></div>
+                                                             pattern="###,###"/></div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="#">일매출 최저액</a>
+                        <a class="small text-white stretched-link" href="#">Lowest Daily Revenue</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
@@ -167,22 +167,22 @@
                     <div class="card-header" style="display: flex; justify-content: space-between">
                         <div>
                             <i class="fas fa-chart-area me-1"></i>
-                            일자별 매출
+                            Daily Sales
                         </div>
                         <div class="col-sm-1.5">
                             <select class="form-control" id="month_val" name="month_val" style="font-size: 8pt">
-                                <option value="01">1월</option>
-                                <option value="02">2월</option>
-                                <option value="03">3월</option>
-                                <option value="04">4월</option>
-                                <option value="05">5월</option>
-                                <option value="06">6월</option>
-                                <option value="07">7월</option>
-                                <option value="08">8월</option>
-                                <option value="09">9월</option>
-                                <option value="10">10월</option>
-                                <option value="11">11월</option>
-                                <option value="12">12월</option>
+                                <option value="01">Jan</option>
+                                <option value="02">Feb</option>
+                                <option value="03">Mar</option>
+                                <option value="04">Apr</option>
+                                <option value="05">May</option>
+                                <option value="06">Jun</option>
+                                <option value="07">Jul</option>
+                                <option value="08">Aug</option>
+                                <option value="09">Sep</option>
+                                <option value="10">Oct</option>
+                                <option value="11">Nov</option>
+                                <option value="12">Dec</option>
                             </select>
                         </div>
                     </div>
@@ -195,7 +195,7 @@
                 <div class="card mb-4">
                     <div class="card-header">
                         <i class="fas fa-chart-bar me-1"></i>
-                        Bar Chart Example
+                        Monthly Sales by Gender
                     </div>
                     <div class="card-body">
                         <div id="myBarChart2" width="100%" height="40"></div>
@@ -206,7 +206,7 @@
         <div class="card mb-4">
             <div class="card-header">
                 <i class="fas fa-table me-1"></i>
-                DataTable Example
+                Customers
             </div>
             <div class="card-body">
                 <table id="datatablesSimple">
@@ -239,7 +239,7 @@
                             <td>${obj.phone}</td>
                             <td>${obj.gender}</td>
                             <td>
-                                <a href="/cust/updateimpl/?id=${obj.id}" class="btn btn-danger" role="button">초기화</a>
+                                <a href="/cust/updateimpl/?id=${obj.id}" class="btn btn-danger" role="button">Reset</a>
                             </td>
                         </tr>
                     </c:forEach>

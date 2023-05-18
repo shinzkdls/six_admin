@@ -30,12 +30,12 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">상품 추가하기</h1>
+    <h1 class="h3 mb-2 text-gray-800">ADD PRODUCT</h1>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">상품 추가하기</h6>
+            <h6 class="m-0 font-weight-bold text-primary">ADD</h6>
         </div>
         <div class="card-body">
             <div id="container">
@@ -85,7 +85,7 @@
 
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <button id="register_btn" type="button" class="btn btn-info">등록</button>
+                            <button id="register_btn" type="button" class="btn btn-info">Register</button>
                         </div>
                     </div>
                 </form>
