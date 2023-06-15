@@ -3,23 +3,25 @@
 <script>
     let item_detail = {
         init:function(){
-            $('#register_btn').click(function(){
+            $('#update_btn').click(function(){
                 item_detail.send();
             });
+
             $('#delete_btn').click(function(){
                var c = confirm('삭제 하시겠습니까');
                if(c == true){
                    location.href='/item/deleteimpl?id=${gitem.id}';
                };
-
             });
         },
+
         send:function(){
             $('#register_form').attr({
                 method:'post',
                 action:'/item/updateimpl',
                 enctype: 'multipart/form-data'
             });
+
             $('#register_form').submit();
         }
     };
@@ -71,7 +73,7 @@
 
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <button id="register_btn" type="button" class="btn btn-info">Update</button>
+                            <button id="update_btn" type="button" class="btn btn-info">Update</button>
                             <button id="delete_btn" type="button" class="btn btn-info">Delete</button>
                         </div>
                     </div>

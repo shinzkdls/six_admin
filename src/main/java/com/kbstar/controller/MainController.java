@@ -106,7 +106,7 @@ public class MainController {
             throw new Exception("가입 오류");
         }
         model.addAttribute("radm", adm);
-        return "redirect:/";
+        return "redirect:/loginpage";
     }
 
     @RequestMapping("/contact")

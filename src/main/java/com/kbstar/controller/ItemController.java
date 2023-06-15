@@ -40,6 +40,8 @@ public class ItemController {
         FileUploadUtil.saveFile(mf,imgdir);
         return "redirect:/item/all";
     }
+
+
     @RequestMapping("/deleteimpl")
     public String deleteimpl(Model model,int id) throws Exception {
         itemService.remove(id);
